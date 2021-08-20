@@ -1,0 +1,45 @@
+.footer-container {
+    height: 100px;
+    width: 100wh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 1000px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cp-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright-icon {
+    color: var(--primary-color);
+}
+
+.cp-container h3 {
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: Nunito;
+}
+
+.git-icon {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.git-icon:hover {
+    color: var(--secondary-color);
+}
