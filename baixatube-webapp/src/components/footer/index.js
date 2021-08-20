@@ -1,4 +1,4 @@
-import "./footer.css";
+import "./styles.css";
 
 import {AiFillGithub, AiOutlineCopyrightCircle} from "react-icons/ai";
 

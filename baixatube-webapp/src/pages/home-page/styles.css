@@ -18,7 +18,8 @@
 }
 
 .home-title {
-    padding-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
     font-family: Nunito;
     font-size: 30px;
@@ -35,13 +36,11 @@
 
     align-items: center;
     justify-content: center;
-
-    
 }
 
 .home-input-container input{
     width: 740px;
-    height: 100%;
+    height: 55px;
 
     border-radius: 10px 0px 0px 10px;
     text-align: center;
@@ -62,7 +61,7 @@
 
 .play-button{
     width: 60px;
-    height: 108%;
+    height: 60px;
 
     color: var(--third-color);
     background-color: var(--secondary-color);
@@ -70,6 +69,12 @@
     border-radius: 0px 10px 10px 0px;
     border: 1.5px solid var(--primary-color);
     border-left: none;
+
+    cursor: pointer;
+}
+
+.pb-disabled {
+    cursor: not-allowed;
 }
 
 .play-button:hover{
@@ -77,3 +82,4 @@
     filter: brightness(90%);
     transition: all 250ms;
 }
+

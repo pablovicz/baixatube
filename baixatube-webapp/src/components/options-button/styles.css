@@ -1,0 +1,72 @@
+.options-button-container {
+
+    width: 100px;
+    height: 70px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 32px;
+}
+
+.options-button-container h3 {
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: semibold;
+
+    line-height: 25px;
+
+    margin-bottom: 0px;
+
+    color: var(--primary-color);
+}
+
+.button-content {
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 100px;
+    height: 45px;
+
+    margin-top: 10px;
+
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 18px;
+
+    border: 1px solid var(--primary-color);
+}
+
+.left {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.right {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.active {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.disabled {
+    background-color: var(--grey-medium);
+    color: var(--primary-color);
+
+    cursor: pointer;
+}
+
+.disabled:hover{
+    background-color: var(--grey-dark);
+    transition: all 250ms;
+}

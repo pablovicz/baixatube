@@ -36,10 +36,17 @@ a {
   text-decoration: none;
 }
 
-.page-content {
+.logo-icon {
+  width: 60px;
+  height: 60px;
+
   display: flex;
-  height: calc(100vh - 220px);
-  flex-direction: row;
-  align-items: center;
+
   justify-content: center;
+  align-items: center;
+
+  border-radius: 100%;
+
+  background-color: var(--secondary-color);
+  color: var(--third-color);
 }
