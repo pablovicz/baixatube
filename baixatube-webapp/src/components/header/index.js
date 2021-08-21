@@ -5,19 +5,19 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 function Header() {
   return (
-    <div class="header-container">
-      <div class="header-content-container">
-        <div class="logo-container">
-          <div class="logo-icon">
+    <div className="header-container">
+      <div className="header-content-container">
+        <div className="logo-container">
+          <div className="logo-icon">
             <GetAppIcon fontSize="large" />
           </div>
-          <div class="logo-text">
-            <h2 class="first">Baixa</h2>
-            <h2 class="second">Tube</h2>
+          <div className="logo-text">
+            <h2 className="first">Baixa</h2>
+            <h2 className="second">Tube</h2>
           </div>
         </div>
         <a
-          class="more"
+          className="more"
           target="_blank"
           href="https://www.google.com.br/"
           rel="noopener noreferrer"

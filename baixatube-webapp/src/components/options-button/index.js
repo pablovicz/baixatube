@@ -9,6 +9,7 @@ function OptionsButton(props){
 
     function handleClick(option){
         setSelectedOption(option)
+        props.parentCallback(selectedOption)
     }
 
     return (
