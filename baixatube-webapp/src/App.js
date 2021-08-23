@@ -8,7 +8,7 @@ import HomePage from './pages/home-page';
 function App() {
   return (
     <div>
-      <Header />
+      <Header />     
       <HomePage />
       <Footer />
     </div>

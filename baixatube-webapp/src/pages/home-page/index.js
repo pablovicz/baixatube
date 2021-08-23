@@ -1,23 +1,30 @@
 import "./styles.css";
 import DownloadOptions from "../../components/download-options";
-import Loading from "../../components/loading";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
-
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState("");
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
-  const [result, setResult] = useState('');
+  // eslint-disable-next-line
+  const [result, setResult] = useState("");
+
+  async function checkElement(selector){
+    while(!document.querySelector(selector)) {
+      await new Promise(r => setTimeout(r, 500));
+    }
+  }
 
   function handleSubmit() {
     let urlIsValid = url.includes("https://www.youtube.com/");
     if (urlIsValid) {
       setLoading(true);
       setShowDownloadOptions(true);
-      setTimeout(() => setLoading(false), 100);
+      checkElement("#widget4").then(setLoading(false));
     }
   }
 
@@ -30,13 +37,16 @@ function HomePage() {
     }
   }
 
-  function handleChildCallback(response){
-    setResult(response)
-    if(response === 'success') {
+  function handleChildCallback(response) {
+    setResult(response);
+    if (response === "success") {
       setShowDownloadOptions(false);
+      setUrl("");
+    }
+    if (response ===  'error') {
+      handleSubmit();
     }
   }
-  
 
   return (
     <div id="home-page">
@@ -52,23 +62,26 @@ function HomePage() {
           />
           <button
             type="button"
-            className={url.includes("https://www.youtube.com/") ? 
-                      "play-button" : 
-                      "play-button pb-disabled"
-                    }
+            className={
+              url.includes("https://www.youtube.com/")
+                ? "play-button"
+                : "play-button pb-disabled"
+            }
             onClick={() => handleSubmit()}
           >
             <PlayArrowIcon fontSize="large" />
           </button>
         </div>
+        <ToastContainer draggable={false} autoclose={4000} className="toast" position={toast.POSITION.TOP_RIGHT}/>
         {showDownloadOptions ? (
-          loading ? (
-            <Loading />
-          ) : (
-            <DownloadOptions url={url} parentCallback={handleChildCallback}/>
-          )
-        ) : (<div></div>)
-        }
+          <DownloadOptions
+            url={url}
+            parentCallback={handleChildCallback}
+            onLoading={loading}
+          />
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );

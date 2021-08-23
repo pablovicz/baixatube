@@ -4,15 +4,8 @@ from django.http import HttpResponse
 import base64
 import os
 
-# Create your views here.
-'''
-def get_file(request):
-    if request.method == 'POST':
-        video = VideoDownloader(request.body).get_file()
-        print(video['download_path'])
-        return JsonResponse(video)
-'''
 
+# Create your views here.
 
 def get_file(request):
     if request.method == 'POST':
@@ -47,4 +40,3 @@ def only_audio(request):
     if request.method == 'GET':
         video = VideoDownloader(request.body).get_only_audio()
         return JsonResponse(video)
-
