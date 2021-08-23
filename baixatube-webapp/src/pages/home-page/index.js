@@ -8,9 +8,9 @@ import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
-
   const [url, setUrl] = useState("");
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
+  const [result, setResult] = useState('');
 
   function handleSubmit() {
     let urlIsValid = url.includes("https://www.youtube.com/");
@@ -30,8 +30,16 @@ function HomePage() {
     }
   }
 
+  function handleChildCallback(response){
+    setResult(response)
+    if(response === 'success') {
+      setShowDownloadOptions(false);
+    }
+  }
+  
+
   return (
-    <div className="home-container">
+    <div id="home-page">
       <div className="home-content">
         <h1 className="home-title">Baixador de Vídeo Online</h1>
         <div className="home-input-container">
@@ -57,11 +65,10 @@ function HomePage() {
           loading ? (
             <Loading />
           ) : (
-            <DownloadOptions url={url} />
+            <DownloadOptions url={url} parentCallback={handleChildCallback}/>
           )
-        ) : (
-          <div></div>
-        )}
+        ) : (<div></div>)
+        }
       </div>
     </div>
   );

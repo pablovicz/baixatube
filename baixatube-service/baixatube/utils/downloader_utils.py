@@ -2,6 +2,7 @@ from pathlib import Path
 import datetime
 import pytube
 import json
+import shutil
 
 
 class VideoDownloader:
@@ -14,13 +15,15 @@ class VideoDownloader:
         self.__youtube = pytube.YouTube(self.__url)
         self.__file_name = None
         self.__resources_path = Path(__file__).parents[2].joinpath('resources')
+        shutil.rmtree(self.__resources_path)
 
     def __get_file_info(self):
         return {'title': self.__youtube.title,
                 'author': self.__youtube.author,
                 'description': self.__youtube.description,
                 'duration': datetime. timedelta(seconds=self.__youtube.length),
-                'download_path': str(self.__resources_path.joinpath(self.__youtube.title).joinpath(self.__file_name))
+                'file_name': self.__file_name,
+                'download_path': str(self.__resources_path.joinpath(self.__file_name))
                 }
 
     def __get_file_name(self):
@@ -70,9 +73,6 @@ class VideoDownloader:
         return self.__get_file_info()
 
 
-
 if __name__ == '__main__':
 
     data = {'url': 'https://www.youtube.com/watch?v=ErdDLRCuXmI', 'extension': 'mp4', 'quality':'alta'}
-
-    video = VideoDownloader(data).get_file()

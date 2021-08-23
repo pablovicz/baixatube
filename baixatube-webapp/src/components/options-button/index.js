@@ -5,11 +5,11 @@ import {useState} from "react";
 
 function OptionsButton(props){
 
-    const [selectedOption, setSelectedOption] = useState(props.option1)
+    const [selectedOption, setSelectedOption] = useState(props.option1);
 
     function handleClick(option){
         setSelectedOption(option)
-        props.parentCallback(selectedOption)
+        props.parentCallback(option)
     }
 
     return (
@@ -20,6 +20,7 @@ function OptionsButton(props){
                     type="button" 
                     onClick={() => handleClick(props.option1)}
                     className={selectedOption === props.option1 ? "btn left active" : "btn left disabled"} 
+                    disabled={props.disabled}
                 >
                     {props.option1}
                 </button>
@@ -27,6 +28,7 @@ function OptionsButton(props){
                     type="button" 
                     onClick={() => handleClick(props.option2)}
                     className={selectedOption === props.option2 ? "btn right active" : "btn right disabled"} 
+                    disabled={props.disabled}
                 >
                     {props.option2}
                 </button>

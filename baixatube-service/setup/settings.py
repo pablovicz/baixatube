@@ -79,6 +79,8 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 
+CORS_EXPOSE_HEADERS = ['file_name']
+
 ROOT_URLCONF = 'setup.urls'
 
 TEMPLATES = [

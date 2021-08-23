@@ -46,10 +46,9 @@
 
     background-color: var(--secondary-color);
     color: var(--third-color);
-
-    cursor: pointer;
-
     border: 1px solid var(--primary-color);
+
+    cursor: pointer; 
 }
 
 .btn-download h3 {
@@ -60,8 +59,34 @@
     margin-left: 15px;
 }
 
+
 .btn-download:hover{
     color: var(--primary-color);
     filter: brightness(90%);
     transition: all 250ms;;
 }
+
+.ld-content {
+    width: 200px;
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    cursor: none;
+
+    background-color: var(--grey-light);
+}
+
+
+/* .loading-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+
