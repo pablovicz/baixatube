@@ -1,10 +1,9 @@
-<div align="center">
-    <p align="center">
-        <a href="">
-            <img src="https://github.com/pablovicz/baixatube/blob/main/baixatube-webapp/public/favicon.svg" alt="baixatube logo"/> 
-        </a>
-    </p>
-</div>
+<p align="center">
+    <a href="https://baixatube.netlify.app/">
+        <img src="https://github.com/pablovicz/baixatube/blob/main/baixatube-webapp/public/baixatube.png" alt="baixatube.com"/> 
+    </a>
+</p>
+
 
 ## Projeto
 Baixador de Vídeos Online
