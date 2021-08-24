@@ -1,5 +1,9 @@
 <div align="center">
-    <h1>BaixaTube</h1>
+    <p align="center">
+        <a href="">
+            <img src="https://github.com/pablovicz/baixatube/blob/main/baixatube-webapp/public/favicon.svg" alt="baixatube logo"/> 
+        </a>
+    </p>
 </div>
 
 ## Projeto
@@ -22,7 +26,10 @@ Baixador de Vídeos Online
 
 
 ## Layout
-<img width=“300” src="https://github.com/pablovicz/baixatube/blob/main/baixatube-layout.PNG" />
+<p align="center"> 
+    <img width"350" height="300" src="https://github.com/pablovicz/baixatube/blob/main/baixatube-layout.PNG" />
+</p>
+
 
 
 ## Como utilizar:
