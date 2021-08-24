@@ -29,16 +29,12 @@ function DownloadOptions(props) {
     setDisabled(true);
 
     const data = {
-      url: props.url,
       extension: extension,
       quality: quality,
     };
 
-    //console.log(data);
-    //console.log("sending request");
-
     await api
-      .post("download/", JSON.stringify(data), {
+      .post(`download/${props.videoId}`, JSON.stringify(data), {
         headers: {
           accept: "application/json",
           "content-type": "application/json",
@@ -46,8 +42,10 @@ function DownloadOptions(props) {
       })
       .then((response) => {
         setLoadingResponse(false);
+        console.log(response);
+        const fileName =  `baixa-tube.${extension}`
         props.parentCallback("success");
-        browserFileDownloader(response);
+        browserFileDownloader(response, fileName);
         toast.success('Vídeo baixado com sucesso!');
       })
       .catch((error) => {
@@ -71,7 +69,7 @@ function DownloadOptions(props) {
           <div className="player-container">
             <ReactPlayer
               className="player-content"
-              url={props.url}
+              url={`https://www.youtube.com/watch?v=${props.videoId}`}
               width="100%"
               height="70%"
               config={{

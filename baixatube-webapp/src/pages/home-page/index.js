@@ -20,6 +20,7 @@ function HomePage() {
   }
 
   function handleSubmit() {
+    console.log(url);
     let urlIsValid = url.includes("https://www.youtube.com/");
     if (urlIsValid) {
       setLoading(true);
@@ -75,7 +76,7 @@ function HomePage() {
         <ToastContainer draggable={false} autoclose={4000} className="toast" position={toast.POSITION.TOP_RIGHT}/>
         {showDownloadOptions ? (
           <DownloadOptions
-            url={url}
+            videoId={url.split('=')[1]}
             parentCallback={handleChildCallback}
             onLoading={loading}
           />

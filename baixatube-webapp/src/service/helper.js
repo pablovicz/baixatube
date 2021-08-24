@@ -9,9 +9,8 @@ function byteArrayToBlob(fileByteArray) {
   return blob;
 }
 
-function browserFileDownloader(response) {
+function browserFileDownloader(response, fileName) {
   var blob = byteArrayToBlob(response.data);
-  var fileName = response.headers.file_name;
 
   var url = window.URL.createObjectURL(blob);
 
