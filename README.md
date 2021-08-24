@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://baixatube.netlify.app/" target="_blank">
+    <a href="https://baixatube.netlify.app/" target="_blank" rel="noopener noreferrer">
         <img src="https://github.com/pablovicz/baixatube/blob/main/baixatube-webapp/public/baixatube.png" alt="baixatube.com"/> 
     </a>
 </p>
