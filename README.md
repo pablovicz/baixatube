@@ -17,10 +17,10 @@ Baixador de Vídeos Online
 
 ## Dependências
 <ul>
-    <li>Python 3.+</li>
-    <li>Pip 21.2+</li>
-    <li>Node.js 14.10+</li>
-    <li>Npm 6.14+</li>
+    <li><a href="https://www.python.org/downloads/">Python 3.+</a></li>
+    <li><a href="https://pip.pypa.io/en/stable/cli/pip_download/">Pip 21.2+/a></li>
+    <li><a href="https://nodejs.org/pt-br/download/">Node.js 14.10+</a></li>
+    <li><a href="https://www.npmjs.com/package/download">Npm 6.14+</a></li>
 </ul>
 
 
@@ -39,7 +39,7 @@ Baixador de Vídeos Online
 $ git clone "https://github.com/pablovicz/baixatube.git"
 ```
 
-<p>2 - Com o Cmd navegue até o diretório /baixatube-service e rode os seguintes comandos:</p>
+<p>2 - No diretório /baixatube-service, execute:</p>
 
 
 ```bash
@@ -47,7 +47,7 @@ $ venv\Scripts\activate.bat
 $ python app.py
 ```
 
-<p>3 - Abrir out prompt de comando, navegar até o diretório /baixatube-webapp e execute:</p>
+<p>3 - No diretório /baixatube-webapp, execute:</p>
 
 ```bash
 $ npm install 
