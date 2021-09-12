@@ -18,7 +18,7 @@ Baixador de Vídeos Online
 ## Dependências
 <ul>
     <li><a href="https://www.python.org/downloads/">Python 3.+</a></li>
-    <li><a href="https://pip.pypa.io/en/stable/cli/pip_download/">Pip 21.2+/a></li>
+    <li><a href="https://pip.pypa.io/en/stable/cli/pip_download/">Pip 21.2+</a></li>
     <li><a href="https://nodejs.org/pt-br/download/">Node.js 14.10+</a></li>
     <li><a href="https://www.npmjs.com/package/download">Npm 6.14+</a></li>
 </ul>
